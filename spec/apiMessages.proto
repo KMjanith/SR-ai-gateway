@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option go_package = "api-gateway/spec";
+
+message RegisterUser{
+  string username = 1;
+  string password = 3;
+}
+
+message RegisterUserResponse{
+  string userId = 1;
+  string message = 2;
+  string token = 3;
+}
+
+message SortingRequest{
+  string method = 1;
+  repeated int64 arr = 3;
+}
+
+message SoritingResponse{
+  string method = 1;
+  repeated int64 sortedArr = 2;
+  string time = 3;
+}
